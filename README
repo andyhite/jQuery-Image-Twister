@@ -1,5 +1,7 @@
 jQuery Twister
 
+NOTE: THIS PLUGIN ONLY WORKS IN BROWSERS THAT DON'T SUCK. That means you'll have to do something else for IE.
+
 Summary
 =======
 
@@ -34,3 +36,7 @@ Limitations and Dependencies
 ============================
 
 This plugin is dependent on zachstronaut's jquery-animate-css-rotate-scale (http://github.com/zachstronaut/jquery-animate-css-rotate-scale/) and is therefore limited to jquery-animate-css-rotate-scale's abilities. It does not, unfortunately, play nicely with Internet Explorer at this time. I am actively looking for a replacement that uses canvas for image rotation, but until I find or write one, there is no way around this limitation (IE just doesn't have a good CSS based rotate method). There are also (apparently) issues in Firefox for Windows that I will fix soon.
+
+I know for a fact that it works in Safari (Win / Mac), Firefox (Mac), Chrome (Mac). Still need to do some Windows testing.
+
+I also haven't tested in Opera yet. If it doesn't work in Opera, give me a heads-up.
