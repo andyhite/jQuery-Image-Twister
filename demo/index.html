@@ -31,6 +31,11 @@
 	    margin: 0 12px 1em 12px;
 	  }
 	  
+	  li {
+	    font-size: 1.2em;
+	    line-height: 1.5em;
+	  }
+	  
 	  pre {
 	    background: #f9ffa1;
 	    color: #000000;
@@ -76,7 +81,6 @@
       
       $('#twister-example_3 .image').twister({
         degrees: 360,
-        overflown: false,
         scale: 1.5
       });
       
@@ -92,8 +96,43 @@
 <body>
   <div id="container">
     <div id="body">
-      <h1>jQuery Twister Demo</h1>
+      <h1>jQuery Twister</h1>
       
+      <h2>Summary</h2>
+      
+      <p>jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on <a href="http://github.com/zachstronaut" target="_blank">zachstronaut</a>'s <a href="http://github.com/zachstronaut/jquery-animate-css-rotate-scale/" target="_blank">jquery-animate-css-rotate-scale</a> for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).</p>
+      
+      <h2>Download</h2>
+      
+      <ul>
+        <li>Download the source as a <a href="http://github.com/andyhite/jQuery-Image-Twister/zipball/master">zip file</a></li>
+        <li>Clone the source from <a href="http://github.com/andyhite/jQuery-Image-Twister">GitHub</a></li>
+      </ul>
+      
+      <h2>Usage</h2>
+      
+      <p>Include the following lines before the &lt;/head&gt; tag at the top of your document:</p>
+      
+      <pre>
+&lt;script src=&quot;jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.transform.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.rotate.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.twister.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre><br />
+      
+      <p>Initialize twister with the following:</p>
+      
+      <pre>&lt;script&gt;$(function(){ $(selector).twister(); });&lt;/script&gt;</pre>
+      
+      <h2>Options</h2>
+      
+      <p><strong>duration</strong> (String, Number): a string representing one of the predefined speeds ("slow" or "fast") or the number of milliseconds to run the animation (default: 250).</p>
+
+      <p><strong>degrees</strong> (Number): a number representing degrees the image will rotate (default: 5)</p>
+ 
+      <p><strong>scale</strong> (Number): a number representing how much to scale the image (default: 1.2)</p>
+      
+      <p><strong>overflown</strong> (Boolean): if set to true, the image will not be masked by it's containing frame. (default: false)</p>
+          
       <h2>Example #1</h2>
       
       <p>Usage case with default options.</p>
@@ -150,7 +189,6 @@
 
       <pre>$('#twister-example_3 .image').twister({
   degrees: 360,
-  overflown: false,
   scale: 1.5
 });</pre>
 
@@ -174,7 +212,7 @@
       
       <h2>Example #4</h2>
       
-      <p>Usage case with full, overflown rotation.</p>
+      <p>Usage case with full, overflown rotation and no image scaling.</p>
       
       <pre>$('#twister-example_4 .image').twister({
   degrees: 360,
@@ -199,6 +237,10 @@
           <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
         </div>
       </div>
+      
+      <h2>Limitations and Dependencies</h2>
+      
+      <p>This plugin is dependent on <a href="http://github.com/zachstronaut" target="_blank">zachstronaut</a>'s <a href="http://github.com/zachstronaut/jquery-animate-css-rotate-scale/" target="_blank">jquery-animate-css-rotate-scale</a> and is therefore limited to jquery-animate-css-rotate-scale's abilities. It does not, unfortunately, play nicely with Internet Explorer at this time. I am actively looking for a replacement that uses canvas for image rotation, but until I find or write one, there is no way around this limitation (IE just doesn't have a good CSS based rotate method). There are also (apparently) issues in Firefox for Windows that I will fix soon.</p>
     </div>
   </div>
 </body>
