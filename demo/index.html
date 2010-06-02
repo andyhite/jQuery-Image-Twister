@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>jQuery Image Twister Demo</title>
+	
+	<style type="text/css">
+	  body {
+	    font-family: Verdana, Arial, sans-serif;
+	    font-size: 62.5%;
+	  }
+	  
+	  h1 {
+	    font-size: 2.4em;
+	    text-align: center;
+	  }
+	  
+	  h2 {
+	    font-size: 1.8em;
+	    padding: 0 12px;
+	    text-align: left;
+	  }
+	  
+	  p {
+	    font-size: 1.2em;
+	    line-height: 1.5em;
+	    margin: 0 12px 1em 12px;
+	  }
+	  
+	  pre {
+	    background: #f9ffa1;
+	    color: #000000;
+	    font-size: 1.4em;
+	    margin: 0 12px;
+	    padding: 6px;
+	  }
+	  
+	  img {
+	    border: 0;
+	    outline: 0;
+	  }
+	  
+	  #container {
+	    margin: 0 auto;
+	    width: 496px;
+	  }
+	  
+	  .gallery {
+	    clear: both;
+	    width: 100%;
+	  }
+	  
+	    .gallery .image {
+	      float: left;
+	      margin: 12px;
+	    }
+  </style>
+  
+  <script src="../lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../lib/jquery.transform.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../lib/jquery.rotate.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../jquery.twister.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+      $('#twister-example_1 .image').twister();
+      
+      $('#twister-example_2 .image').twister({
+        overflown: true
+      });
+      
+      $('#twister-example_3 .image').twister({
+        center: true,
+        degrees: 360,
+        overflown: true,
+        scale: 100        
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="body">
+      <h1>jQuery Twister Demo</h1>
+      
+      <h2>Example #1</h2>
+      
+      <p>Simple usage case with default options.</p>
+      
+      <pre>$('#twister-example_1 .image').twister();</pre>
+      
+      <div class="gallery" id="twister-example_1">
+        <div class="image">
+          <a href="#"><img src="images/thumb-1.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-2.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-3.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+      </div>
+      
+      <h2>Example #2</h2>
+      
+      <p>Simple usage case with overflown rotation.</p>
+      
+      <pre>$('#twister-example_2 .image').twister({
+  overflown: true
+});</pre>
+      
+      <div class="gallery" id="twister-example_2">
+        <div class="image">
+          <a href="#"><img src="images/thumb-1.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-2.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-3.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+      </div>
+      
+      <h2>Example #3</h2>
+      
+      <p>More complex usage, with full, overflown rotation. (Note: full rotation is somewhat buggy. If the rotation is more than a "tilt", the option "center" must be set to true.)</p>
+      
+      <pre>$('#twister-example_3 .image').twister({
+  center: true,
+  degrees: 360,
+  overflown: true,
+  scale: 100
+});</pre>
+      
+      <div class="gallery" id="twister-example_3">
+        <div class="image">
+          <a href="#"><img src="images/thumb-1.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-2.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-3.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+    
+        <div class="image">
+          <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
