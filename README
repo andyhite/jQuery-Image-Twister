@@ -1,6 +1,6 @@
 jQuery Twister
 
-NOTE: THIS PLUGIN ONLY WORKS IN BROWSERS THAT DON'T SUCK. That means you'll have to do something else for IE.
+NOTE: THIS PLUGIN ONLY WORKS IN BROWSERS THAT DON'T SUCK. That means you'll have to do something else for IE. Apparently Firefox (Windows) doesn't play nice either, but I'm working on that.
 
 Summary
 =======
