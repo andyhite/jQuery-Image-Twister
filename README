@@ -10,7 +10,7 @@ jQuery Twister is a simple plugin that adds a "twist" effect to images when you 
 Usage
 =====
 
-Include the following lines before the </head> tag at the top of your document:
+Unpack the JS files from the root and lib/ directories into your document root and include the following lines before the </head> tag at the top of your document (change the src paths if you put them in another directory):
 
 <script src="jquery.js" type="text/javascript"></script>
 <script src="jquery.transform.js" type="text/javascript"></script>
