@@ -1,11 +1,10 @@
 jQuery Twister
+==============
 
-NOTE: THIS PLUGIN ONLY WORKS IN BROWSERS THAT DON'T SUCK. That means you'll have to do something else for IE. Apparently Firefox (Windows) doesn't play nice either, but I'm working on that.
-
+NOTE: THIS PLUGIN ONLY WORKS IN BROWSERS THAT DON'T SUCK. That means you'll have to do something else for IE. It's not my fault. I swear. Apparently Firefox (Windows) doesn't play nice either, but I'm working on that.
 Summary
-=======
 
-jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on zachstronaut's jquery-animate-css-rotate-scale (http://github.com/zachstronaut/jquery-animate-css-rotate-scale/) for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).
+jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on zachstronaut's jquery-animate-css-rotate-scale for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).
 
 Usage
 =====
@@ -17,9 +16,15 @@ Unpack the JS files from the root and lib/ directories into your document root a
 <script src="jquery.rotate.js" type="text/javascript"></script>
 <script src="jquery.twister.js" type="text/javascript"></script>
 
+Make sure the images you want to "twist" have container DIVs. Something like this:
+
+<div class="image">
+  <a href="#"><img src="images/thumb.jpg" /></a>
+</div>
+
 Initialize twister with the following:
 
-<script>$(function(){ $(selector).twister(); });</script>
+<script>$(function(){ $('.image').twister(); });</script>
 
 Options
 =======

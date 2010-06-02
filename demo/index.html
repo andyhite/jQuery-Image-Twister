@@ -120,10 +120,17 @@
 &lt;script src=&quot;jquery.transform.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;jquery.rotate.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;jquery.twister.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre><br />
+
+      <p>Make sure the images you want to "twist" have container DIVs. Something like this:</p>
+      
+      <pre>
+&lt;div class="image"&gt;
+  &lt;a href="#"&gt;&lt;img src="images/thumb.jpg" /&gt;&lt;/a&gt;
+&lt;/div&gt;</pre><br />
       
       <p>Initialize twister with the following:</p>
       
-      <pre>&lt;script&gt;$(function(){ $(selector).twister(); });&lt;/script&gt;</pre>
+      <pre>&lt;script&gt;$(function(){ $('.image').twister(); });&lt;/script&gt;</pre>
       
       <h2>Options</h2>
       
