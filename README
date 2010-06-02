@@ -3,7 +3,7 @@ jQuery Twister
 Summary
 =======
 
-jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on zachstronaut's jquery-animate-css-rotate-scale for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).
+jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on zachstronaut's jquery-animate-css-rotate-scale (http://github.com/zachstronaut/jquery-animate-css-rotate-scale/) for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).
 Download
 
     * Download the source as a zip file
@@ -33,3 +33,8 @@ degrees (Number): a number representing degrees the image will rotate (default: 
 scale (Number): a number representing how much to scale the image (default: 1.2)
 
 overflown (Boolean): if set to true, the image will not be masked by it's containing frame. (default: false)
+
+Limitations and Dependencies
+============================
+
+This plugin is dependent on zachstronaut's jquery-animate-css-rotate-scale (http://github.com/zachstronaut/jquery-animate-css-rotate-scale/) and is therefore limited to jquery-animate-css-rotate-scale's abilities. It does not, unfortunately, play nicely with Internet Explorer at this time. I am actively looking for a replacement that uses canvas for image rotation, but until I find or write one, there is no way around this limitation (IE just doesn't have a good CSS based rotate method). There are also (apparently) issues in Firefox for Windows that I will fix soon.
