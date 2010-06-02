@@ -4,10 +4,6 @@ Summary
 =======
 
 jQuery Twister is a simple plugin that adds a "twist" effect to images when you hover over them. It is dependent on zachstronaut's jquery-animate-css-rotate-scale (http://github.com/zachstronaut/jquery-animate-css-rotate-scale/) for animating element rotation in modern browsers, and I take no credit for his work (which does most of the heavy lifting).
-Download
-
-    * Download the source as a zip file
-    * Clone the source from GitHub
 
 Usage
 =====
