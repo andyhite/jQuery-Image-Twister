@@ -20,6 +20,7 @@
 	  
 	  h2 {
 	    font-size: 1.8em;
+	    margin-bottom: 0.5em;
 	    padding: 0 12px;
 	    text-align: left;
 	  }
@@ -50,6 +51,7 @@
 	  
 	  .gallery {
 	    clear: both;
+	    margin-bottom: 2em;
 	    width: 100%;
 	  }
 	  
@@ -73,10 +75,15 @@
       });
       
       $('#twister-example_3 .image').twister({
-        center: true,
+        degrees: 360,
+        overflown: false,
+        scale: 1.5
+      });
+      
+      $('#twister-example_4 .image').twister({
         degrees: 360,
         overflown: true,
-        scale: 100        
+        scale: 1
       });
     });
   </script>
@@ -89,7 +96,7 @@
       
       <h2>Example #1</h2>
       
-      <p>Simple usage case with default options.</p>
+      <p>Usage case with default options.</p>
       
       <pre>$('#twister-example_1 .image').twister();</pre>
       
@@ -113,7 +120,7 @@
       
       <h2>Example #2</h2>
       
-      <p>Simple usage case with overflown rotation.</p>
+      <p>Usage case with overflown rotation.</p>
       
       <pre>$('#twister-example_2 .image').twister({
   overflown: true
@@ -136,19 +143,46 @@
           <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
         </div>
       </div>
-      
+
       <h2>Example #3</h2>
-      
-      <p>More complex usage, with full, overflown rotation. (Note: full rotation is somewhat buggy. If the rotation is more than a "tilt", the option "center" must be set to true.)</p>
-      
+
+      <p>Usage case with full rotation.</p>
+
       <pre>$('#twister-example_3 .image').twister({
-  center: true,
+  degrees: 360,
+  overflown: false,
+  scale: 1.5
+});</pre>
+
+      <div class="gallery" id="twister-example_3">
+        <div class="image">
+          <a href="#"><img src="images/thumb-1.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+
+        <div class="image">
+          <a href="#"><img src="images/thumb-2.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+
+        <div class="image">
+          <a href="#"><img src="images/thumb-3.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+
+        <div class="image">
+          <a href="#"><img src="images/thumb-4.jpeg" alt="Braiiiinnnnss..." /></a>
+        </div>
+      </div>
+      
+      <h2>Example #4</h2>
+      
+      <p>Usage case with full, overflown rotation.</p>
+      
+      <pre>$('#twister-example_4 .image').twister({
   degrees: 360,
   overflown: true,
-  scale: 100
+  scale: 1
 });</pre>
       
-      <div class="gallery" id="twister-example_3">
+      <div class="gallery" id="twister-example_4">
         <div class="image">
           <a href="#"><img src="images/thumb-1.jpeg" alt="Braiiiinnnnss..." /></a>
         </div>

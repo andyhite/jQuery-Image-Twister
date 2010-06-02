@@ -9,9 +9,8 @@ $(function(){
     options = jQuery.extend({
       duration: 250,
       degrees: 5,
-      scale: 120,
-      overflown: false,
-			center: false
+      scale: 1.2,
+      overflown: false
     }, options);
       
     $(this).each(function(){
@@ -29,11 +28,9 @@ $(function(){
         .css({
           zIndex: '9999'
         })
-        .animate({ 
-          marginTop: options.center ? '0' : '-' + (options.degrees * 2) + '%',
-          marginLeft: options.center ? '0' : '-' + (options.degrees * 2) + '%',
-          rotate: options.degrees + 'deg', 
-          width: options.scale + '%'
+        .animate({
+          rotate: options.degrees + 'deg',
+					scale: options.scale
         }, { 
           duration: options.duration, 
           queue: true
@@ -45,10 +42,8 @@ $(function(){
           zIndex: '9988'
         })
         .animate({
-          marginTop: '0',
-          marginLeft: '0',
           rotate: 0 + 'deg',
-          width: 100 + '%'
+					scale: 1
         }, {
           duration: options.duration,
           queue: true
